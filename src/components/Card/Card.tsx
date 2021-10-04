@@ -21,7 +21,7 @@ export const Card: React.FC<Props> = (props) => {
         />
         <img
           className="Card__ribbon-coin"
-          src="./ribbonCoin.svg"
+          src="./RibbonCoin.svg"
           alt="Coin"
         />
         <span className="Card__ribbon-value">

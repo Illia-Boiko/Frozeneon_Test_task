@@ -1,0 +1,116 @@
+.Card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  height: 300px;
+  width: 220px;
+  border-radius: 10px;
+  background-image: url('../../images/CardBackGround.png');
+  background-position: -17px -8px;
+  background-size: 115%;
+  overflow: hidden;
+  padding: 0 15px 15px;
+  transition: box-shadow 0.3s;
+
+  &:hover {
+    box-shadow: 3px 2px 10px #682fbdcd;
+  }
+
+  &__ribbon {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &__ribbon-image {
+    position: absolute;
+    top: 3px;
+    left: 4px;
+  }
+
+  &__ribbon-coin {
+    position: absolute;
+    top: 27px;
+    left: 6px;
+  }
+
+  &__ribbon-value {
+    position: absolute;
+    transform: rotate(-40deg);
+    top: 15px;
+    left: 20px;
+    color: white;
+    font-weight: 700;
+    font-size: 14px;
+  }
+
+  &__amount {
+    margin: 20px 0 0;
+    color: white;
+    font-size: 32px;
+  }
+
+  &__text {
+    color: white;
+    font-size: 14px;
+    font-weight: 200;
+  }
+
+  &__button-border {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+    width: 155px;
+    height: 47px;
+    border-radius: 35px;
+    background-image: linear-gradient(to right, #682fbd 0%, #cb4cbc 100%);
+    margin-top: 30px;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    border: none;
+    border-radius: 35px;
+    background-image: linear-gradient(to right, #242333 0%, #3c3b53 100%);
+    color: white;
+    cursor: pointer;
+
+    &>:first-child {
+      margin-right: 3px;
+      margin-left: 20px;
+    }
+
+    &:hover {
+      animation: moveButton 0.5s infinite linear;
+    }
+  }
+}
+
+@keyframes moveButton {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(3deg);
+  }
+
+  50% {
+    transform: rotate(0deg);
+  }
+
+  75% {
+    transform: rotate(-3deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}

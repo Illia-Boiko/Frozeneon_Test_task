@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "bonus": "x200",
+    "image": "./crystal1.svg",
+    "amount": "x100",
+    "price": 5,
+    "currency": "./$.svg"
+  },
+  {
+    "id": 2,
+    "bonus": "x500",
+    "image": "./crystal2.svg",
+    "amount": "x500",
+    "price": 10,
+    "currency": "./$.svg"
+  },
+  {
+    "id": 3,
+    "bonus": "x15k",
+    "image": "./crystal3.svg",
+    "amount": "x1000",
+    "price": 15,
+    "currency": "./$.svg"
+  },
+  {
+    "id": 4,
+    "bonus": "x30k",
+    "image": "./crystal4.svg",
+    "amount": "x1500",
+    "price": 20,
+    "currency": "./$.svg"
+  },
+  {
+    "id": 5,
+    "bonus": "x45k",
+    "image": "./crystal5.svg",
+    "amount": "x2000",
+    "price": 25,
+    "currency": "./$.svg"
+  },
+  {
+    "id": 6,
+    "bonus": "x65k",
+    "image": "./crystal6.svg",
+    "amount": "x3000",
+    "price": 30,
+    "currency": "./$.svg"
+  },
+  {
+    "id": 7,
+    "bonus": "x80k",
+    "image": "./crystal7.svg",
+    "amount": "x4500",
+    "price": 35,
+    "currency": "./$.svg"
+  },
+  {
+    "id": 8,
+    "bonus": "x90k",
+    "image": "./crystal8.svg",
+    "amount": "x6000",
+    "price": 40,
+    "currency": "./$.svg"
+  },
+  {
+    "id": 9,
+    "bonus": "x95k",
+    "image": "./crystal9.svg",
+    "amount": "x10000",
+    "price": 45,
+    "currency": "./$.svg"
+  }
+]

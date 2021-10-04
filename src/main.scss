@@ -1,0 +1,10 @@
+@import './utils/normalize';
+@import './utils/variables';
+@import './utils/mixins';
+
+@import './components/Page/Page.scss';
+@import './components/Header/Header.scss';
+@import './components/Main/Main.scss';
+@import './components/Navigation/Navigation.scss';
+@import './components/CardsBox/CardsBox.scss';
+@import './components/Card/Card.scss';

@@ -1,0 +1,12 @@
+.Main {
+  background-image: url(../../images/mainBackGroun.png);
+  background-size: cover;
+  background-position: top;
+  min-height: calc( 100vh - #{$header-height});
+  padding: 10px 0 30px;
+
+  &__content {
+    max-width: 1080px;
+  }
+}
+

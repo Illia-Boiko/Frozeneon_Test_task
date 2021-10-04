@@ -1,33 +1,59 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 export const Navigation: React.FC = () => {
   return (
     <nav className="Navigation">
       <ul className="Navigation__list">
         <li className="Navigation__list-item">
-          <a href="/monster-boxes" className="Navigation__link">
+          <NavLink
+            to="/"
+            className="Navigation__link"
+            activeClassName="Navigation__link--active"
+            exact
+          >
             Монстр Бокси
-          </a>
+          </NavLink>
         </li>
         <li className="Navigation__list-item">
-          <a href="/bank" className="Navigation__link Navigation__link--active">
+          <NavLink
+            to="/bank"
+            className="Navigation__link"
+            activeClassName="Navigation__link--active"
+            exact
+          >
             Банк
-          </a>
+          </NavLink>
         </li>
         <li className="Navigation__list-item">
-          <a href="/" className="Navigation__link">
+          <NavLink
+            to="/other"
+            className="Navigation__link"
+            activeClassName="Navigation__link--active"
+            exact
+          >
             Наборы
-          </a>
+          </NavLink>
         </li>
         <li className="Navigation__list-item">
-          <a href="/" className="Navigation__link">
+          <NavLink
+            to="/other"
+            className="Navigation__link"
+            activeClassName="Navigation__link--active"
+            exact
+          >
             Спецпредложения
-          </a>
+          </NavLink>
         </li>
         <li className="Navigation__list-item">
-          <a href="/" className="Navigation__link">
+          <NavLink
+            to="/other"
+            className="Navigation__link"
+            activeClassName="Navigation__link--active"
+            exact
+          >
             Промокоды
-          </a>
+          </NavLink>
         </li>
       </ul>
     </nav>

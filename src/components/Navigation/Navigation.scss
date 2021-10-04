@@ -55,7 +55,18 @@
         width: 80%;
         background-image: linear-gradient(to right, #f52cbf, #ff7c46);
         bottom: 0;
+        animation: activeLink 0.5s;
       }
     }
+  }
+}
+
+@keyframes activeLink {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 80%;
   }
 }

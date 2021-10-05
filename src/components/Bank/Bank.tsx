@@ -1,6 +1,8 @@
 import React from 'react';
 import cards from '../../cardsInfo.json';
+import coinCards from '../../coinCardsinfo.json';
 import { Card } from '../Card';
+import { CoinCard } from '../CoinCard';
 
 export const Bank: React.FC = () => {
   return (
@@ -25,12 +27,12 @@ export const Bank: React.FC = () => {
         Монеты Незера
       </h2>
       <ul className="Bank__list">
-        {cards.map(card => (
+        {coinCards.map(card => (
           <li
             className="Bank__item"
             key={card.id}
           >
-            <Card card={card} />
+            <CoinCard card={card} />
           </li>
         ))}
       </ul>

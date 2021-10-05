@@ -1,0 +1,21 @@
+@mixin cardsButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  border: none;
+  border-radius: 35px;
+  background-image: linear-gradient(to right, #242333 0%, #3c3b53 100%);
+  color: white;
+  cursor: pointer;
+
+  &:active {
+    opacity: 0.7;
+  }
+
+  &>:first-child {
+    margin-right: 5px;
+    margin-left: 20px;
+  }
+}

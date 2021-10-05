@@ -37,7 +37,7 @@ export const Card: React.FC<Props> = (props) => {
         {card.amount}
       </p>
       <span className="Card__text">
-        Handful of Coins
+        Handful of Crystals
       </span>
       <div className="Card__button-border">
         <button

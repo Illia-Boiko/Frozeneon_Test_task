@@ -1,8 +1,7 @@
 .MonsterBoxes {
   position: relative;
   background-color: #242333;
-  border-bottom-right-radius: 8px;
-  border-bottom-left-radius: 8px;
+  border-radius: 0 0 8px 8px;
 
   &__title {
     display: flex;

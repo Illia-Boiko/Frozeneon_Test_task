@@ -1,6 +1,6 @@
 .Main {
   background-image: url(../../images/mainBackGroun.png);
-  background-size: 100% 100vh;
+  background-size: 100%;
   background-position: top;
   background-repeat: no-repeat;
   min-height: calc( 100vh - #{$header-height});

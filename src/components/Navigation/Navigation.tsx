@@ -27,7 +27,7 @@ export const Navigation: React.FC = () => {
         </li>
         <li className="Navigation__list-item">
           <NavLink
-            to="/other"
+            to="/sets"
             className="Navigation__link"
             activeClassName="Navigation__link--active"
             exact
@@ -37,7 +37,7 @@ export const Navigation: React.FC = () => {
         </li>
         <li className="Navigation__list-item">
           <NavLink
-            to="/other"
+            to="/special"
             className="Navigation__link"
             activeClassName="Navigation__link--active"
             exact
@@ -47,7 +47,7 @@ export const Navigation: React.FC = () => {
         </li>
         <li className="Navigation__list-item">
           <NavLink
-            to="/other"
+            to="/promoCodes"
             className="Navigation__link"
             activeClassName="Navigation__link--active"
             exact

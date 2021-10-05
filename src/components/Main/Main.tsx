@@ -1,5 +1,7 @@
 import React from 'react';
-import { CardsBox } from '../CardsBox';
+import { Route } from 'react-router-dom';
+import { Bank } from '../Bank';
+import { MonsterBoxes } from '../MonsterBoxes';
 import { Navigation } from '../Navigation';
 
 export const Main: React.FC = () => {
@@ -7,7 +9,12 @@ export const Main: React.FC = () => {
     <main className="Main">
       <div className="Main__content content">
         <Navigation />
-        <CardsBox />
+        <Route path="/" exact>
+          <MonsterBoxes />
+        </Route>
+        <Route path="/bank" exact>
+          <Bank />
+        </Route>
       </div>
     </main>
   );

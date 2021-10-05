@@ -47,6 +47,7 @@
       background-size: 100% 3px;
       background-image: linear-gradient(to right, #f52cbf33 0%, #ff7c4633 100%), linear-gradient(to right, #9794c633 0%, transparent 100%);
       background-color: transparent;
+      animation: activeLinkBack 0.3s;
 
       &::after {
         position: absolute;
@@ -68,5 +69,15 @@
 
   100% {
     width: 80%;
+  }
+}
+
+@keyframes activeLinkBack {
+  0% {
+    background-position: 100% 0, 100% 0;
+  }
+
+  100% {
+    background-position: 0 100%, 0 100%;
   }
 }

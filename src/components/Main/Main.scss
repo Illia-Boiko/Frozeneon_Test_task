@@ -3,11 +3,37 @@
   background-size: 100%;
   background-position: top;
   background-repeat: no-repeat;
-  min-height: calc( 100vh - #{$header-height});
+  min-height: calc(100vh - #{$header-height});
   padding: 10px 0 30px;
   background-color: #16151F;
 
-  &__content {
-    max-width: 1080px;
+  @include onMobile {
+    padding-top: 0;
+    min-height: calc(100vh - #{$mobile-header-height});
+    background-size: cover;
+  }
+
+  &__Navigation {
+    margin: 0 auto;
+
+    @media (max-width: 1050px) {
+      margin: 0 25px;
+    }
+
+    @include onMobile {
+      margin: 0 0 10px;
+    }
+  }
+
+  &__MonsterBoxes {
+    margin: 0 auto;
+
+    @include adaptations;
+  }
+
+  &__Bank {
+    margin: 0 auto;
+
+    @include adaptations;
   }
 }

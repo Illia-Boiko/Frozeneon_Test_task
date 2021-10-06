@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 export const Navigation: React.FC = () => {
   return (
-    <nav className="Navigation">
+    <nav className="Navigation Main__Navigation">
       <ul className="Navigation__list">
         <li className="Navigation__list-item">
           <NavLink
@@ -12,7 +12,7 @@ export const Navigation: React.FC = () => {
             activeClassName="Navigation__link--active"
             exact
           >
-            Монстр Бокси
+            Монстр Боксы
           </NavLink>
         </li>
         <li className="Navigation__list-item">
@@ -42,7 +42,9 @@ export const Navigation: React.FC = () => {
             activeClassName="Navigation__link--active"
             exact
           >
-            Спецпредложения
+            Спец
+            <br className="Navigation__brake" />
+            предложения
           </NavLink>
         </li>
         <li className="Navigation__list-item">
@@ -52,7 +54,9 @@ export const Navigation: React.FC = () => {
             activeClassName="Navigation__link--active"
             exact
           >
-            Промокоды
+            Промо
+            <br className="Navigation__brake" />
+            коды
           </NavLink>
         </li>
       </ul>

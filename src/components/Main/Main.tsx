@@ -8,7 +8,7 @@ import { Navigation } from '../Navigation';
 export const Main: React.FC = () => {
   return (
     <main className="Main">
-      <div className="Main__content content">
+      <div className="Main__content">
         <Navigation />
         <Route path="/" exact>
           <MonsterBoxes />

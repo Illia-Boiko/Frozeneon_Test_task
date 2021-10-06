@@ -41,19 +41,19 @@
     transform: rotate(-40deg);
     top: 15px;
     left: 20px;
-    color: white;
+    color: #fff;
     font-weight: 700;
     font-size: 14px;
   }
 
   &__amount {
     margin: 20px 0 0;
-    color: white;
+    color: #fff;
     font-size: 32px;
   }
 
   &__text {
-    color: white;
+    color: #fff;
     font-size: 14px;
     font-weight: 200;
   }
@@ -76,27 +76,5 @@
     &:hover {
       animation: moveButton 0.5s infinite linear;
     }
-  }
-}
-
-@keyframes moveButton {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  25% {
-    transform: rotate(3deg);
-  }
-
-  50% {
-    transform: rotate(0deg);
-  }
-
-  75% {
-    transform: rotate(-3deg);
-  }
-
-  100% {
-    transform: rotate(0deg);
   }
 }

@@ -1,5 +1,13 @@
 .Navigation {
-  margin: 0 auto;
+  max-width: $max-width;
+
+  &__brake {
+    display: none;
+
+    @include onMobile {
+      display: block;
+    }
+  }
 
   &__list {
     display: flex;
@@ -7,6 +15,10 @@
     margin: 0 auto;
     list-style: none;
     padding: 0;
+
+    @include onMobile {
+      width: 100vw;
+    }
   }
 
   &__list-item {
@@ -16,8 +28,7 @@
     text-align: center;
     background-color: #262031;
     margin-right: 7px;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
+    border-radius: $border-radius $border-radius 0 0;
     color: #9794c6;
     transition: background-color 0.3s, color 0.3s;
 
@@ -27,7 +38,13 @@
 
     &:hover {
       background-color: #682fbdcd;
-      color: white;
+      color: #fff;
+    }
+
+    @include onMobile {
+      margin-right: 0;
+      border-radius: 0;
+      height: 48px;
     }
   }
 
@@ -37,9 +54,13 @@
     justify-content: center;
     height: 100%;
     width: 100%;
-    font-size: 14px;
+    font-size: 18px;
     text-decoration: none;
     color: inherit;
+
+    @include onMobile {
+      font-size: 10px;
+    }
 
     &--active {
       background-position: 0 100%, 0 100% ;
@@ -48,6 +69,7 @@
       background-image: linear-gradient(to right, #f52cbf33 0%, #ff7c4633 100%), linear-gradient(to right, #9794c633 0%, transparent 100%);
       background-color: transparent;
       animation: activeLinkBack 0.3s;
+      color: #fff;
 
       &::after {
         position: absolute;
@@ -59,25 +81,5 @@
         animation: activeLink 0.5s;
       }
     }
-  }
-}
-
-@keyframes activeLink {
-  0% {
-    width: 0;
-  }
-
-  100% {
-    width: 80%;
-  }
-}
-
-@keyframes activeLinkBack {
-  0% {
-    background-position: 100% 0, 100% 0;
-  }
-
-  100% {
-    background-position: 0 100%, 0 100%;
   }
 }

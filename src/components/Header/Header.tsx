@@ -3,6 +3,13 @@ import React, { useState } from 'react';
 export const Header: React.FC = () => {
   const [coins, setCoins] = useState(100254);
   const [crystals, setCrystals] = useState(1254);
+  // eslint-disable-next-line no-restricted-globals
+  // const [size, setSize] = useState(innerWidth);
+
+  // window.addEventListener('resize', () => {
+  //   // eslint-disable-next-line no-restricted-globals
+  //   setSize(innerWidth);
+  // });
 
   const addCoins = () => {
     setCoins(amount => amount + 1);
@@ -14,13 +21,15 @@ export const Header: React.FC = () => {
 
   return (
     <header className="Header Page__Header">
-      <div className="Header__content content">
+      <div className="Header__content">
         <button
           type="button"
           className="Header__button Header__button--back"
         >
           <img src="./leftArrow.png" alt="Left Arrow" />
-          Back
+          <span className="Header__button-text">
+            Back
+          </span>
         </button>
         <div className="Header__bank-items">
           <div className="Header__bank-item">
@@ -30,7 +39,11 @@ export const Header: React.FC = () => {
               alt="Coins"
             />
             <span className="Header__bank-info">
-              {coins}
+              {// eslint-disable-next-line no-restricted-globals
+                innerWidth > 768
+                  ? coins
+                  : `${(coins / 1000).toFixed(1)}k`
+              }
               <br />
               <span className="Header__currency-name">
                 Coins
@@ -70,7 +83,9 @@ export const Header: React.FC = () => {
           className="Header__button Header__button--home"
         >
           <img src="./homeIcon.png" alt="Home Icon" />
-          Home
+          <span className="Header__button-text">
+            Home
+          </span>
         </button>
       </div>
     </header>

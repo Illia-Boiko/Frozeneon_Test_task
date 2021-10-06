@@ -1,9 +1,11 @@
 .ComingSoon {
-  background-color: #242333;
-  border-radius: 0 0 8px 8px;
+  max-width: $max-width;
+  margin: 0 auto;
 
+  @include adaptations;
+  
   &__title {
-    background-color: #242333;
+    background-color: $darkGreyBackground;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -12,6 +14,10 @@
     color: #fff;
     text-align: center;
     padding-bottom: 1em;
-    border-radius: 0 0 8px 8px;
+    border-radius: 0 0 $border-radius $border-radius;
+
+    @include onMobile {
+      border-radius: $border-radius;
+    }
   }
 }

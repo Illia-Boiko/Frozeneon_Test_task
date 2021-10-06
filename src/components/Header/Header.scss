@@ -7,29 +7,73 @@
   z-index: 2;
   top: 0;
 
+  @include onMobile {
+    background-color: #262435;
+    background-image: none;
+  }
+
   &__content {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 1440px;
     height: $header-height;
+    margin: 0 auto;
+    padding: 0;
+
+    @include onMobile {
+      height: $mobile-header-height;
+    }
   }
 
   &__bank-items {
-    color: white;
+    color: #fff;
     display: flex;
     align-items: center;
     gap: 50px;
+
+    @include onMobile {
+      gap: 5px;
+    }
   }
 
   &__bank-item {
     display: flex;
     align-items: center;
     gap: 20px;
+
+    @include onMobile {
+      gap: 10px;
+    }
+  }
+
+  &__bank-info {
+    @include onMobile {
+      font-size: 12px;
+    }
   }
 
   &__currency-name {
     font-size: 0.7rem;
     color: #b9b7ea;
+  }
+
+  &__coins-image {
+    @include onMobile {
+      height: 30px;
+    }
+  }
+
+  &__crystals-image {
+    @include onMobile {
+      height: 30px;
+    }
+  }
+
+  &__currency-name {
+    @include onMobile {
+      display: none;
+    }
   }
 
   &__add-button {
@@ -49,6 +93,14 @@
     &:active {
       opacity: 0.7;
     }
+
+    @include onMobile {
+      transform: scale(0.8);
+
+      &:hover {
+        transform: scale(0.9);
+      }
+    }
   }
 
   &__button {
@@ -63,11 +115,22 @@
     border-top: none;
     border-bottom: none;
     border-radius: 30px;
-    color: white;
+    color: #fff;
     text-transform: uppercase;
     font-weight: 700;
     background-repeat: no-repeat;
     background-size: 100% 2px;
+
+    @include onMobile {
+      padding: 0;
+      width: min-content;
+    }
+  }
+
+  &__button-text {
+    @include onMobile {
+      display: none;
+    }
   }
 
   &__button--back {
@@ -79,6 +142,17 @@
     &:hover {
       transform: translateX(-10px);
     }
+
+    @include onMobile {
+      border-left: none;
+      border-right: none;
+      background-image: none;
+      justify-content: start;
+
+      &:hover {
+        transform: none;
+      }
+    }
   }
 
   &__button--home {
@@ -89,6 +163,17 @@
 
     &:hover {
       transform: translateX(10px);
+    }
+
+    @include onMobile {
+      border-left: none;
+      border-right: none;
+      background-image: none;
+      justify-content: end;
+
+      &:hover {
+        transform: none;
+      }
     }
   }
 }

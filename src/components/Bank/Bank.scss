@@ -1,8 +1,12 @@
 .Bank {
   position: relative;
-  background-color: #242333;
-  border-bottom-right-radius: 8px;
-  border-bottom-left-radius: 8px;
+  background-color: $darkGreyBackground;
+  border-radius: 0 0 $border-radius $border-radius;
+  max-width: $max-width;
+
+  @include onMobile {
+    border-radius: $border-radius;
+  }
 
   &__title {
     display: flex;
@@ -12,6 +16,10 @@
     margin: 0;
     color: #fff;
     text-align: center;
+
+    @include onMobile {
+      display: none;
+    }
   }
 
   &__list {

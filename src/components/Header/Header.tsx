@@ -1,15 +1,18 @@
-import React, { useState } from 'react';
+import React, { useCallback, useState } from 'react';
+import { debounce } from 'lodash';
 
 export const Header: React.FC = () => {
+  // eslint-disable-next-line no-restricted-globals
+  const [size, setSize] = useState(innerWidth);
   const [coins, setCoins] = useState(100254);
   const [crystals, setCrystals] = useState(1254);
-  // eslint-disable-next-line no-restricted-globals
-  // const [size, setSize] = useState(innerWidth);
 
-  // window.addEventListener('resize', () => {
-  //   // eslint-disable-next-line no-restricted-globals
-  //   setSize(innerWidth);
-  // });
+  const resize = useCallback(debounce(setSize, 500), []);
+
+  window.addEventListener('resize', () => {
+    // eslint-disable-next-line no-restricted-globals
+    resize(innerWidth);
+  });
 
   const addCoins = () => {
     setCoins(amount => amount + 1);
@@ -39,11 +42,9 @@ export const Header: React.FC = () => {
               alt="Coins"
             />
             <span className="Header__bank-info">
-              {// eslint-disable-next-line no-restricted-globals
-                innerWidth > 768
-                  ? coins
-                  : `${(coins / 1000).toFixed(1)}k`
-              }
+              {size > 768
+                ? coins
+                : `${(coins / 1000).toFixed(1)}k`}
               <br />
               <span className="Header__currency-name">
                 Coins

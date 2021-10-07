@@ -21,8 +21,13 @@
     margin: 0 auto;
     padding: 0;
 
+    @media (max-width: 1490px) {
+      margin: 0 25px;
+    }
+
     @include onMobile {
       height: $mobile-header-height;
+      margin: 0;
     }
   }
 
@@ -41,9 +46,14 @@
     display: flex;
     align-items: center;
     gap: 20px;
+    border-radius: 30px;
+    background-image: linear-gradient(to right, #0d0b0f33 0%, #0c0d0f55 100%);
 
     @include onMobile {
       gap: 10px;
+      background-size: 70% 70%, 0 0;
+      background-position: center;
+      background-repeat: no-repeat;
     }
   }
 

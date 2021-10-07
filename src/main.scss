@@ -1,0 +1,14 @@
+@import './utils/normalize';
+@import './utils/variables';
+@import './utils/mixins';
+@import './utils/animations';
+
+@import './components/Page/Page.scss';
+@import './components/Header/Header.scss';
+@import './components/Main/Main.scss';
+@import './components/Navigation/Navigation.scss';
+@import './components/MonsterBoxes/MonsterBoxes.scss';
+@import './components/Bank/Bank.scss';
+@import './components/Card/Card.scss';
+@import './components/CoinCard/CoinCard.scss';
+@import './components/ComingSoon/ComingSoon.scss';

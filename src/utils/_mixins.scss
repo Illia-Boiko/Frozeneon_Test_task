@@ -1,0 +1,43 @@
+@mixin onMobile {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin adaptations {
+  @media (max-width: 1050px) {
+    margin: 0 25px;
+  }
+
+  @include onMobile {
+    margin: 0 25px;
+    border-radius: $border-radius;
+  }
+}
+
+@mixin cardsButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  border: none;
+  border-radius: 35px;
+  background-color: transparent;
+  background-image: linear-gradient(to right, $darkGreyBackground 0%, #3c3b53 100%);
+  color: #fff;
+  cursor: pointer;
+
+  &:active {
+    opacity: 0.7;
+  }
+
+  &>:first-child {
+    margin-right: 5px;
+    margin-left: 20px;
+  }
+
+  @include onMobile {
+    background-image: none;
+  }
+}

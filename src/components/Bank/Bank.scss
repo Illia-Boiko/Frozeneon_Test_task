@@ -1,0 +1,46 @@
+.Bank {
+  position: relative;
+  background-color: $darkGreyBackground;
+  border-radius: 0 0 $border-radius $border-radius;
+  max-width: $max-width;
+
+  @include onMobile {
+    border-radius: $border-radius;
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0 10px;
+    margin: 0;
+    color: #fff;
+    text-align: center;
+
+    @include onMobile {
+      display: none;
+    }
+  }
+
+  &__list {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    margin: 0;
+    padding: 20px;
+    list-style: none;
+    overflow: scroll;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__line {
+    height: 1px;
+    background-color: #9794c615;
+  }
+}
+

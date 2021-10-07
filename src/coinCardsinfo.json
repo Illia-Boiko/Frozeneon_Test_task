@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "bonus": "x200",
+    "image": "./coins1.svg",
+    "amount": "x100",
+    "price": 5,
+    "currency": "./currensyCrystal.svg"
+  },
+  {
+    "id": 2,
+    "bonus": "x500",
+    "image": "./coins2.svg",
+    "amount": "x500",
+    "price": 10,
+    "currency": "./currensyCrystal.svg"
+  },
+  {
+    "id": 3,
+    "bonus": "x15k",
+    "image": "./coins3.svg",
+    "amount": "x1000",
+    "price": 15,
+    "currency": "./currensyCrystal.svg"
+  },
+  {
+    "id": 4,
+    "bonus": "x30k",
+    "image": "./coins4.svg",
+    "amount": "x1500",
+    "price": 20,
+    "currency": "./currensyCrystal.svg"
+  },
+  {
+    "id": 5,
+    "bonus": "x45k",
+    "image": "./coins5.svg",
+    "amount": "x2000",
+    "price": 25,
+    "currency": "./currensyCrystal.svg"
+  },
+  {
+    "id": 6,
+    "bonus": "x65k",
+    "image": "./coins6.svg",
+    "amount": "x3000",
+    "price": 30,
+    "currency": "./currensyCrystal.svg"
+  }
+]

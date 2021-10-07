@@ -1,0 +1,23 @@
+.ComingSoon {
+  max-width: $max-width;
+  margin: 0 auto;
+
+  @include adaptations;
+  
+  &__title {
+    background-color: $darkGreyBackground;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0 10px;
+    margin: 0;
+    color: #fff;
+    text-align: center;
+    padding-bottom: 1em;
+    border-radius: 0 0 $border-radius $border-radius;
+
+    @include onMobile {
+      border-radius: $border-radius;
+    }
+  }
+}

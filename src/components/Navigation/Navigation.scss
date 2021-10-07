@@ -1,0 +1,91 @@
+.Navigation {
+  max-width: $max-width;
+
+  &__brake {
+    display: none;
+
+    @include onMobile {
+      display: block;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    list-style: none;
+    padding: 0;
+
+    @include onMobile {
+      width: 100vw;
+    }
+  }
+
+  &__list-item {
+    position: relative;
+    width: 185px;
+    height: 55px;
+    text-align: center;
+    background-color: #262031;
+    margin-right: 7px;
+    border-radius: $border-radius $border-radius 0 0;
+    color: #9794c6;
+    transition: background-color 0.3s, color 0.3s;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover {
+      background-color: #682fbdcd;
+      color: #fff;
+    }
+
+    @include onMobile {
+      margin-right: 0;
+      border-radius: 0;
+      height: 48px;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    font-size: 18px;
+    text-decoration: none;
+    color: inherit;
+
+    @include onMobile {
+      font-size: 10px;
+    }
+
+    &--active {
+      background-position: 0 100%, 0 100% ;
+      background-repeat: no-repeat;
+      background-size: 100% 3px;
+      background-image: linear-gradient(to right, #f52cbf33 0%, #ff7c4633 100%);
+      background-color: transparent;
+      animation: activeLinkBack 0.3s;
+      color: #fff;
+
+      @include onMobile {
+        background-size: 100% 3px, 100%;
+        background-image: linear-gradient(to right, #f52cbf33 0%, #ff7c4633 100%),
+        linear-gradient(to top, #F52CBF10 0%, #F52CBF00 100%);
+      }
+
+      &::after {
+        position: absolute;
+        content: '';
+        height: 3px;
+        width: 80%;
+        background-image: linear-gradient(to right, #f52cbf, #ff7c46);
+        bottom: 0;
+        animation: activeLink 0.5s;
+      }
+    }
+  }
+}
